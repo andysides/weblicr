@@ -52,6 +52,7 @@ group :test do
 
   gem 'capybara'
   gem 'poltergeist'
+  gem 'guard-rspec'
 
   gem 'rack_session_access'
   gem 'database_cleaner'
