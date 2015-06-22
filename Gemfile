@@ -51,7 +51,7 @@ group :test do
   gem 'factory_girl_rails'
 
   gem 'capybara'
-  gem 'capybara-webkit'
+  gem 'poltergeist'
 
   gem 'rack_session_access'
   gem 'database_cleaner'
