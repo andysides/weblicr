@@ -26,7 +26,13 @@ en:
       message: 'The following error(s) prevented registration:'
     fields:
       submit: Sign Up
+      login: Log In
     sign_up:
       link: Sign Up
       success: Thank you for signing up!
-      error:
+    login:
+      link: Log In
+      success: Logged in!
+      failure: Email or password is invalid
+    logout:
+      link: Log Out
