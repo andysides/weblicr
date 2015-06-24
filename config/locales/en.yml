@@ -21,3 +21,12 @@
 
 en:
   title: "Weblicr Homepage"
+  user:
+    errors:
+      message: 'The following error(s) prevented registration:'
+    fields:
+      submit: Sign Up
+    sign_up:
+      link: Sign Up
+      success: Thank you for signing up!
+      error:

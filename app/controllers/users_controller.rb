@@ -7,15 +7,15 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:auth_token] = @user.id
-      redirect_to root_url, notice: "Thank you for signing up!"
+      redirect_to root_url, notice: I18n.t('user.sign_up.success')
     else
-      render "new"
+      render 'new'
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 end

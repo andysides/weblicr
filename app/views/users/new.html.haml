@@ -1,0 +1,18 @@
+%h1 Sign Up
+= form_for @user do |f|
+  = display_errors(model: @user, text: "#{t('user.errors.message')}")
+  %p "#{t('user.errors.message')}"
+  .field
+    = f.label :email
+    = f.text_field :email
+  %br
+  .field
+    = f.label :password
+    = f.password_field :password
+  %br
+  .field
+    .field
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
+  .actions
+    = f.submit t('user.fields.submit')
