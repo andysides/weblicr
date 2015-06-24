@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:auth_token] = @user.id
+      session[:auth_token] = @user.auth_token
       redirect_to root_url, notice: I18n.t('user.sign_up.success')
     else
       render 'new'
