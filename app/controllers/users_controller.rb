@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  include UsersHelper
+
   def new
     @user = User.new
   end
@@ -13,7 +15,29 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = user
+    redirect_to root_url, notice: I18n.t('user.edit.access_denied') if
+      !can_edit?(user: @user)
+  end
+
+  def update
+    if user.update_attributes(user_params)
+      redirect_to user_path, notice: I18n.t('user.edit.success_message')
+    else
+      render 'edit'
+    end
+  end
+
+  def show
+    @user = user
+  end
+
   private
+
+  def user
+    User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
