@@ -25,7 +25,11 @@ gem 'sdoc', '~> 0.4.1', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Useful for debugging
 gem 'better_errors'
+
+# Use for paginatino
+gem 'kaminari'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 
   before_create { generate_token(:auth_token) }
 
+  paginates_per 5
+
   # def send_password_reset
   #   logger.debug "User: #{self.attributes.inspect}"
   #   generate_token(:password_reset_token)

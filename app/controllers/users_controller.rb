@@ -33,10 +33,18 @@ class UsersController < ApplicationController
     @user = user
   end
 
+  def index
+    @users = User.page current_page
+  end
+
   private
 
   def user
     User.find(params[:id])
+  end
+
+  def current_page
+    params[:page] || 1
   end
 
   def user_params
