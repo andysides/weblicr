@@ -1,0 +1,10 @@
+%h2 Edit Information
+= form_for @user do |f|
+  -# = display_errors(model: @user, text: "#{t('user.errors.message')}")
+  -# %p "#{t('user.errors.message')}"
+  .field
+    = f.label :email
+    = f.text_field :email
+  %br
+  .actions
+    = f.submit t('user.fields.edit')

@@ -25,6 +25,12 @@ gem 'sdoc', '~> 0.4.1', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Useful for debugging
+gem 'better_errors'
+
+# Use for paginatino
+gem 'kaminari'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -34,6 +40,7 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   gem 'byebug'
+  gem 'sqlite3'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.1.2'
@@ -50,7 +57,8 @@ group :test do
   gem 'factory_girl_rails'
 
   gem 'capybara'
-  gem 'capybara-webkit'
+  gem 'poltergeist'
+  gem 'guard-rspec'
 
   gem 'rack_session_access'
   gem 'database_cleaner'

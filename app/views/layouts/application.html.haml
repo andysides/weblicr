@@ -1,0 +1,20 @@
+%html
+  %head
+    %title Weblicr Homepage
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    - if current_user
+      Logged in as #{current_user["email"]}
+      #{link_to I18n.t('user.show.link'), edit_user_path(current_user)}
+      #{link_to I18n.t('user.logout.link'), logout_path}
+    - else
+      #{link_to I18n.t('user.login.link'), login_path}
+      or
+      #{link_to I18n.t('user.sign_up.link'), signup_path}
+    - flash.each do |name, msg|
+      = content_tag :div, msg, :id => "flash_#{name}"
+    %h1= link_to "Weblicr Homepage", '/'
+
+    =yield

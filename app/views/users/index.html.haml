@@ -1,0 +1,5 @@
+- @users.each do |u|
+  %a{:title => "#{u.email}", :href => user_path(u)} #{u.email}
+  %br
+
+= paginate @users

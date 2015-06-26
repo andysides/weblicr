@@ -20,4 +20,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  title: "Weblicr Homepage"
+  user:
+    edit:
+      link: Edit Profile
+      success_message: Your profile has been saved.
+      access_denied: You cannot edit another user's profile.
+    errors:
+      message: 'The following error(s) prevented registration:'
+    fields:
+      submit: Sign Up
+      login: Log In
+      edit: Save Profile
+    login:
+      link: Log In
+      success: Logged in!
+      failure: Email or password is invalid
+    logout:
+      link: Log Out
+    sign_up:
+      link: Sign Up
+      success: Thank you for signing up!
+    show:
+      link: My Profile
